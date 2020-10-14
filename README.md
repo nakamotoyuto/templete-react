@@ -1,27 +1,31 @@
 # react redux(redux toolkit)を使ったテンプレート
 
 ## 開発環境
-* node v12.13.1
-* npm v6.13.4
+
+- node v12.13.1
+- npm v6.13.4
 
 ### install
+
 ```
 $ npm ci
 ```
 
 ### usage
+
 ```
 $ npm run start
 ```
 
 ### build
+
 ```
 $ npm run build
 ```
 
 ### 構成
 
-react / redux-tool-kitを使用
+react / redux-tool-kit を使用
 
 react v16.13.1,
 reduxjs/toolkit v1.3.6
@@ -75,3 +79,7 @@ reduxjs/toolkit v1.3.6
                     ├── Top.tsx
                     └── TopList.tsx（そのページでしか使われないreact-componentは同階層に設置）
 ```
+
+### 解説
+
+https://qiita.com/Sotq_17/items/7c7ab9880597336b3ee5
