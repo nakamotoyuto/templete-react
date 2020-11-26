@@ -23,6 +23,12 @@ $ npm run start
 $ npm run build
 ```
 
+### test
+
+```
+$npm t
+```
+
 ### 構成
 
 react / redux-tool-kit を使用
@@ -34,6 +40,7 @@ reduxjs/toolkit v1.3.6
 
 ```
 ─── src
+    ├── test(テストファイル置き場)
     ├── img (画像置き場)
     │   └── common
     │       └── favicon.png
