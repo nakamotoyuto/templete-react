@@ -2,7 +2,10 @@
   "presets": [
     [
         "@babel/preset-react",
-        { "runtime": "automatic", "importSource": "@emotion/react" }
+        { 
+            "runtime": "automatic",
+            "importSource": "@emotion/react" 
+        }
     ],
     "@babel/preset-typescript",
     "@emotion/babel-preset-css-prop",
@@ -18,8 +21,7 @@
   "plugins": [
     "@babel/plugin-syntax-dynamic-import",
     "@babel/plugin-proposal-class-properties",
-    "@babel/plugin-syntax-object-rest-spread",
-    "@emotion/babel-plugin"
+    "@babel/plugin-syntax-object-rest-spread"
     ],
   "env": {
     "development": {

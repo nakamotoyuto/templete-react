@@ -2,6 +2,7 @@ import { jsx } from '@emotion/react'
 
 export const Button = props => {
   const button = {
+
     backgroundColor: `${props.bgColor}`,
     color: `${props.color}`,
     border: `1px solid ${props.bgColor}`,
@@ -12,8 +13,8 @@ export const Button = props => {
 
 
   return (
-    <div css={button} onClick={props.onClick}>
+    <button css={button} onClick={props.onClick}>
       {props.name}
-    </div>
+    </button>
   )
 }
