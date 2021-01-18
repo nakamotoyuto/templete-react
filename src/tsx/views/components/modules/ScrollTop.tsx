@@ -3,18 +3,6 @@
 import { jsx } from '@emotion/react'
 import { animateScroll as scroll } from 'react-scroll'
 
-export default function ScrollTop() {
-  const scrollToTop = () => {
-    scroll.scrollToTop()
-  }
-
-  return (
-    <div css={ButtonContainer} onClick={scrollToTop}>
-      <p css={ButtonContent}>↑</p>
-    </div>
-  )
-}
-
 const ButtonContainer = {
   position: 'fixed',
   right: '50px',
@@ -34,3 +22,17 @@ const ButtonContent = {
   fontWeight: 'bold',
   fontSize: '24px'
 } as const
+
+export default function ScrollTop() {
+  const scrollToTop = () => {
+    scroll.scrollToTop()
+  }
+
+  return (
+    <div css={ButtonContainer} onClick={scrollToTop}>
+      <p css={ButtonContent}>↑</p>
+    </div>
+  )
+}
+
+
