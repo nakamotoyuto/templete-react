@@ -1,6 +1,6 @@
 // 機能を持ったcomponent(=module)はここに
 
-import { jsx, css } from '@emotion/react'
+import { jsx } from '@emotion/react'
 import { animateScroll as scroll } from 'react-scroll'
 
 export default function ScrollTop() {
@@ -15,7 +15,7 @@ export default function ScrollTop() {
   )
 }
 
-const ButtonContainer = css({
+const ButtonContainer = {
   position: 'fixed',
   right: '50px',
   bottom: '50px',
@@ -27,10 +27,10 @@ const ButtonContainer = css({
   borderRadius: '50%',
   background: '#062854',
   cursor: 'pointer'
-})
+} as const
 
-const ButtonContent = css({
+const ButtonContent = {
   color: '#ffffff',
   fontWeight: 'bold',
   fontSize: '24px'
-})
+} as const

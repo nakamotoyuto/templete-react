@@ -1,6 +1,5 @@
 // 同ページ内のユニークな要素は同じディレクトリで作成
 import { jsx } from '@emotion/react'
-import { css } from '@emotion/react'
 import { hot } from 'react-hot-loader'
 
 const TopList = () => {
@@ -17,6 +16,6 @@ const TopList = () => {
 
 export default hot(module)(TopList)
 
-const TopListContainer = css({
+const TopListContainer = {
   height: '100vh'
-})
+}
