@@ -1,7 +1,6 @@
 // 機能を持ったcomponent(=module)はここに
 
-import React from 'react'
-import { css } from '@emotion/core'
+import { jsx, css } from '@emotion/react'
 import { animateScroll as scroll } from 'react-scroll'
 
 export default function ScrollTop() {

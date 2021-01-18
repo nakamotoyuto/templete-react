@@ -1,4 +1,4 @@
-import React from 'react'
+import { jsx } from '@emotion/react'
 import { HeaderContainer } from '../../../style/components/block/Header'
 
 export default function Header() {

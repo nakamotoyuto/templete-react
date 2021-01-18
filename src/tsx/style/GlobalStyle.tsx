@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Global, css } from '@emotion/core'
+import { Global, css, jsx } from '@emotion/react'
 import { textClr } from '../style/variables'
 import { reset } from './resetStyle'
 

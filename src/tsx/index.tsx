@@ -1,11 +1,11 @@
-import React from 'react'
-import { css } from '@emotion/core'
+import  * as jsx from 'react'
 import ReactDOM from 'react-dom'
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import store from './stores'
 import GlobalStyle from './style/GlobalStyle'
 import 'react-hot-loader'
+
 
 const app = document.getElementById('app')
 // page

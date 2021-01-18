@@ -1,4 +1,4 @@
-import { css } from '@emotion/core'
+import { css } from '@emotion/react'
 import { themeClr } from '../../../style/variables'
 
 // どっちの書き方でもOK！

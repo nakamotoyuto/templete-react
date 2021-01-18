@@ -1,6 +1,6 @@
 // 同ページ内のユニークな要素は同じディレクトリで作成
-import React from 'react'
-import { css } from '@emotion/core'
+import { jsx } from '@emotion/react'
+import { css } from '@emotion/react'
 import { hot } from 'react-hot-loader'
 
 const TopList = () => {

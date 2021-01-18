@@ -1,4 +1,4 @@
-import React from 'react'
+import { jsx } from '@emotion/react'
 import { useDispatch, useSelector } from 'react-redux'
 import { selectUser, logout } from '../../../stores/slices/userSlice'
 import { BrowserRouter as Router, useHistory } from 'react-router-dom'

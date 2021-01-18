@@ -1,4 +1,4 @@
-import { css } from '@emotion/core'
+import { css } from '@emotion/react'
 import { media_pc, media_pc_l } from '../variables'
 
 export const LoginTitle = css`
