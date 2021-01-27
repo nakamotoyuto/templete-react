@@ -11,7 +11,7 @@ for (let i = 0; i < 10; ++i) {
     company_name: faker.company.companyName(),
     comment: faker.lorem.sentences(),
     country: faker.address.country(),
-    image: faker.image.imageUrl(),
+    image: `${faker.image.people()}?random=${i + 1}`,
     create_at: faker.date.past()
   })
 }
