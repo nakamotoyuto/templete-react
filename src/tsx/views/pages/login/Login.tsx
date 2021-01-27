@@ -5,7 +5,6 @@ import { jsx } from '@emotion/react'
 // sliceから使用するaction
 import {
   editUsername,
-  editPassword,
   fetchAsyncLogin,
   selectUser
 } from '../../../stores/slices/userSlice'
@@ -42,7 +41,6 @@ const Login = () => {
     e.preventDefault()
     // importしたactionをdispatchする
     dispatch(editUsername(userName))
-    dispatch(editPassword(passWord))
     dispatch(fetchAsyncLogin())
     setUserName('')
     setPassWord('')

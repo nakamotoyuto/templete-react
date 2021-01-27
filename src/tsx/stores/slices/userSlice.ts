@@ -1,7 +1,6 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 import axios from 'axios'
-import {apiURL} from "../../utils/constants"
- 
+import { apiURL } from '../../utils/constants'
 
 // 非同期はSliceの外に出してcreateAsyncThunkを使用する
 export const fetchAsyncLogin = createAsyncThunk('login/get', async () => {
@@ -25,10 +24,6 @@ const loginSlice = createSlice({
   reducers: {
     editUsername: (state, action) => {
       state.auth.username = action.payload
-
-    },
-    editPassword: (state, action) => {
-      state.auth.password = action.payload
     },
     logout: (state, action) => {
       state.isLogin = false
@@ -43,7 +38,7 @@ const loginSlice = createSlice({
 })
 
 // actionをexport
-export const { editUsername, editPassword, logout } = loginSlice.actions
+export const { editUsername, logout } = loginSlice.actions
 // state情報をexport
 export const selectUser = (state: any) => state.login
 // reducerをexport → storeへ

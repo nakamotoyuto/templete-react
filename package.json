@@ -32,6 +32,7 @@
     "babel-loader": "^8.2.2",
     "babel-plugin-styled-components": "^1.12.0",
     "core-js": "^3.8.2",
+    "faker": "^5.2.0",
     "html-webpack-plugin": "^4.5.1",
     "imagemin": "^7.0.1",
     "imagemin-jpegtran": "^7.0.0",
