@@ -107,11 +107,13 @@ React もくもく会開催します！
 進め方：実装（30 分) ＋ レビュー（30 分)
 
 - 実装
+
   個別にブランチを切って、以下「課題」の実装をします。
   とりあえず３０分間もくもく作業します（この際いつでも質問 OK です！）
   終わったらそれぞれブランチに push！
 
 - レビュー
+
   それぞれのコードをみながら、軽くディスカッション
   書き方の違いを確認し、良い点や改善点などを話し合いましょう！
 
@@ -144,6 +146,8 @@ npm run json-server
 
 #### ログイン画面
 
+サンプル：
+
 https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/325594/95903f88-e309-21eb-cf13-2b913f6e4088.png
 
 ■ 実装内容
@@ -159,6 +163,8 @@ https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/325594/95903f88-e309
 * フォーム用のライブラリを入れていただいても OK です！
 
 #### トップ画面
+
+サンプル：
 
 https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/325594/57f3f5ee-3450-a3ef-b12f-bc7fbbca38dc.png
 
