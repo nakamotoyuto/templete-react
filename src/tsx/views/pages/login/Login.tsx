@@ -6,6 +6,7 @@ import { jsx } from '@emotion/react'
 import {
   editUsername,
   fetchAsyncLogin,
+  editPassword,
   selectUser
 } from '../../../stores/slices/userSlice'
 import { BrowserRouter as Router, useHistory } from 'react-router-dom'
@@ -41,6 +42,7 @@ const Login = () => {
     e.preventDefault()
     // importしたactionをdispatchする
     dispatch(editUsername(userName))
+    dispatch(editUsername(passWord))
     dispatch(fetchAsyncLogin())
     setUserName('')
     setPassWord('')
