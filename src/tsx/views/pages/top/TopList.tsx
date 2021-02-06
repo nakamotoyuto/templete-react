@@ -2,15 +2,17 @@
 import { jsx } from '@emotion/react'
 import { hot } from 'react-hot-loader'
 
-const TopList = () => {
+const TopList = ({ user }) => {
   return (
     <div css={TopListContainer}>
       <ul>
-        <li>List</li>
-        <li>List</li>
-        <li>List</li>
+        {user.length &&
+          user.map(item => (
+            <li key={item.id}>{item.firstName}</li>
+          ))
+        }
       </ul>
-    </div>
+    </div >
   )
 }
 

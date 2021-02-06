@@ -41,8 +41,8 @@ const Login = () => {
   const handleSubmit = (e: any) => {
     e.preventDefault()
     // importしたactionをdispatchする
-    dispatch(editUsername(userName))
-    dispatch(editUsername(passWord))
+    // dispatch(editUsername(userName))
+    // dispatch(editPassword(passWord))
     dispatch(fetchAsyncLogin())
     setUserName('')
     setPassWord('')
@@ -50,10 +50,11 @@ const Login = () => {
 
   //   Loginを検知してページ遷移
   useEffect(() => {
+    console.log(user)
     if (user.isLogin === true) {
       history.push('/top')
     }
-  }, [user])
+  }, [user.isLogin])
 
   return (
     <div>

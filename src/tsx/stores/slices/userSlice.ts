@@ -39,6 +39,7 @@ const loginSlice = createSlice({
     })
   }
 })
+// console.log(state.login)
 
 // actionをexport
 export const { editUsername, editPassword, logout } = loginSlice.actions

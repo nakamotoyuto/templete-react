@@ -3,35 +3,34 @@ import axios from 'axios'
 import { apiURL } from '../../utils/constants'
 
 // 非同期はSliceの外に出してcreateAsyncThunkを使用する
-export const fetchAsyncUser = createAsyncThunk('user', async () => {
+export const fetchAsyncUsers = createAsyncThunk('user/get', async () => {
   //  ログインAPIを叩く想定
-  const userAll = await axios.get(`${apiURL}/users`)
-  return userAll
-  //   console.log(res.data)
+  const res = await fetch(`${apiURL}/users`)
+  return res.json()
 })
 
-const userSlice = createSlice({
+const usersSlice = createSlice({
   //   slice名
   name: 'user',
   //   初期値
   initialState: {
-    users: []
+    users: {}
   },
   //各reducer 第一引数でstate情報を受け取り、第二引数でユーザーが操作した情報を受け取る
   reducers: {
   },
   //   非同期の結果を受け取る
   extraReducers: builder => {
-    builder.addCase(fetchAsyncUser.fulfilled, (state, action) => {
-      // console.log(action)
-      state.users.push(action.payload.data)
+    builder.addCase(fetchAsyncUsers.fulfilled, (state, action) => {
+      state.users = action.payload
+      console.log(state.users)
     })
   }
 })
-
+// console.log(state.users)
 // actionをexport
-// export const { editUsername, editPassword, logout } = loginSlice.actions
+// export const {} = usersSlice.actions
 // state情報をexport
-// export const selectUser = (state: any) => state.login
+export const selectUsers = (state: any) => state.user.users
 // reducerをexport → storeへ
-export default userSlice.reducer
+export default usersSlice.reducer
