@@ -3,9 +3,23 @@ import axios from 'axios'
 import { apiURL } from '../../utils/constants'
 
 // 非同期はSliceの外に出してcreateAsyncThunkを使用する
-export const fetchAsyncLogin = createAsyncThunk('login', async () => {
+interface loginFormInput {
+  userName: string;
+  passWord: string;
+}
+
+export const fetchAsyncLogin = createAsyncThunk('login', async (data: loginFormInput) => {
   //  ログインAPIを叩く想定
-  await axios.get(`${apiURL}/login`)
+  console.log(data)
+  const loginParams = {
+    username: data.userName,
+    password: data.passWord
+  }
+  const res = await fetch(`${apiURL}/login`, {
+    method: 'POST',
+    body: JSON.stringify(loginParams)
+  })
+  return res.json()
   //   console.log(res.data)
 })
 
@@ -35,6 +49,7 @@ const loginSlice = createSlice({
   //   非同期の結果を受け取る
   extraReducers: builder => {
     builder.addCase(fetchAsyncLogin.fulfilled, (state, action) => {
+      console.log(state)
       state.isLogin = true
     })
   }
@@ -46,4 +61,4 @@ export const { editUsername, editPassword, logout } = loginSlice.actions
 // state情報をexport
 export const selectUser = (state: any) => state.login
 // reducerをexport → storeへ
-export default loginSlice.reducer
+export const loginReducer = loginSlice.reducer

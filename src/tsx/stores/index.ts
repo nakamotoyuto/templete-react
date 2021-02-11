@@ -1,6 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit'
-import loginReducer from './slices/userSlice'
-import usersReducer from './slices/usersSlice'
+import { loginReducer } from './slices/userSlice'
+import { usersReducer } from './slices/usersSlice'
 
 // それぞれのSliceを呼び出して結合する
 export default configureStore({

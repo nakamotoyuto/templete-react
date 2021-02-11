@@ -1,5 +1,4 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
-import axios from 'axios'
 import { apiURL } from '../../utils/constants'
 
 // 非同期はSliceの外に出してcreateAsyncThunkを使用する
@@ -33,4 +32,4 @@ const usersSlice = createSlice({
 // state情報をexport
 export const selectUsers = (state: any) => state.user.users
 // reducerをexport → storeへ
-export default usersSlice.reducer
+export const usersReducer =  usersSlice.reducer
